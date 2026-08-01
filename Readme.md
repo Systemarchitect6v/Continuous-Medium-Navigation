@@ -49,3 +49,9 @@ Where $\phi_{\text{trim}}$ is the structural trimming factor corresponding to hu
 ---
 
 ## 4. Repository Structure & System Implementation
+---
+
+## 5. Deployment & Next Steps
+
+1. **Review Core Solver:** Inspect `src/engine.py` to view the implementation of the $\theta_i$ tracking angle solver.
+2. **Run Validation Suite:** Verify dynamic equilibrium convergence under simulated fluid shear conditions.
