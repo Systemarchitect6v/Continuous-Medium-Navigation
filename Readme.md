@@ -49,6 +49,13 @@ Where $\phi_{\text{trim}}$ is the structural trimming factor corresponding to hu
 ---
 
 ## 4. Repository Structure & System Implementation
+
+* `docs/board_briefing.pdf` — High-level executive synthesis
+* `docs/mathematical_proof.pdf` — Full 6-vector tensor derivations
+* `src/engine.py` — Core 6-vector state solver
+* `src/sensors.py` — Simulated medium strain-gauge integration
+* `tests/test_equilibrium.py` — Unit tests verifying zero-lag convergence
+
 ---
 
 ## 5. Deployment & Next Steps
