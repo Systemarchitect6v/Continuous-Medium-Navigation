@@ -7,6 +7,12 @@ under simulated fluid shear and hydrostatic pressure tensors.
 import math
 import numpy as np
 import pytest
+import sys
+from pathlib import Path
+
+# Add repository root to Python path so 'src' is always discoverable
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
 from src.engine import SixVectorEngine
 
 
