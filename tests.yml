@@ -26,4 +26,5 @@ jobs:
 
     - name: Run Zero-Equilibrium Unit Tests
       run: |
-        python -m pytest
+        export PYTHONPATH="${PYTHONPATH}:${{ github.workspace }}"
+        pytest tests/test_equilibrium.py
