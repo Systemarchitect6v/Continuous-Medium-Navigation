@@ -24,7 +24,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install pytest numpy matplotlib
 
-    - name: Run Zero-Equilibrium Unit Tests
+   - name: Run Zero-Equilibrium Unit Tests
       run: |
         export PYTHONPATH="${PYTHONPATH}:${{ github.workspace }}"
         pytest tests/test_equilibrium.py
