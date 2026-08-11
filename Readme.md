@@ -46,6 +46,34 @@ $$\theta_i = \arctan2 \left( \frac{2 \tau_{xy}}{\sigma_{xx} - \sigma_{yy}} \righ
 
 Where $\phi_{\text{trim}}$ is the structural trimming factor corresponding to hull geometry. When $\theta_i \to 0$, the vehicle experiences zero net shear resistance, achieving minimum hydrodynamic drag and continuous inertial coherence.
 
+### System Data Flow Architecture
+
+```mermaid
+graph TD
+    subgraph Inputs ["Continuous 3D Medium (Environment)"]
+        A["Normal Stresses<br/>(σxx, σyy, σzz)"]
+        B["Shear Stresses / Vorticity<br/>(τxy, τyz, τzx)"]
+    end
+
+    subgraph Core ["src/ System Components"]
+        C["src/sensors.py<br/>Medium Strain-Gauge Integration"]
+        D["6-Vector State Tensor (S ∈ ℝ⁶)"]
+        E["src/engine.py<br/>SixVectorEngine / θi Solver"]
+    end
+
+    subgraph Output ["Guidance & Execution"]
+        F{"θi Calculation<br/>arctan2(2τxy, σxx - σyy) + ϕtrim"}
+        G["Zero Equilibrium Achieved<br/>(θi → 0 | Min Hydrodynamic Drag)"]
+        H["Inertial Coherence & Alignment"]
+    end
+
+    A --> C
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F -->|θi Convergence| G
+    G --> H
 ---
 
 ## 4. Repository Structure & System Implementation
