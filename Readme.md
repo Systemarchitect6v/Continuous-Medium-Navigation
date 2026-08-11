@@ -83,3 +83,26 @@ graph TD
 
 1. **Review Core Solver:** Inspect `src/engine.py` to view the implementation of the $\theta_i$ tracking angle solver.
 2. **Run Validation Suite:** Verify dynamic equilibrium convergence under simulated fluid shear conditions.
+### Engine Execution Sequence
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant Env as Fluid Medium
+    participant Sensors as src/sensors.py
+    participant Engine as src/engine.py
+    participant Test as tests/test_equilibrium.py
+
+    Test->>Sensors: Simulate fluid shear & stress forces
+    Sensors->>Sensors: Capture 6-axis strain differentials (S ∈ ℝ⁶)
+    Sensors->>Engine: Pass local stress-strain state vector [S]
+    
+    rect rgb(240, 248, 255)
+        note over Engine: Real-Time Vector Resolution
+        Engine->>Engine: Solve principal eigenvector
+        Engine->>Engine: Compute Instantaneous Tracking Angle (θi)
+    end
+
+    Engine-->>Test: Return θi & Zero Equilibrium state
+    Test->>Test: Assert zero net shear resistance & convergence
+```
