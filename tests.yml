@@ -25,7 +25,5 @@ jobs:
         pip install pytest numpy matplotlib
 
     - name: Run Zero-Equilibrium Unit Tests
-      env:
-        PYTHONPATH: .
       run: |
-        pytest
+        python -m pytest
