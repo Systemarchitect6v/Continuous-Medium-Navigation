@@ -1,4 +1,4 @@
-> **Framework Navigation:** 🌐 [Systems Ontology Overview](https://github.com/Systemarchitect6v/Resonance-Matrix) | 📐 [6-Vector Model (Resonance-Matrix)](https://github.com/Systemarchitect6v/systems-ontology-proof-of-concept/blob/main/README.md)
+> **Framework Navigation:** 🌐 [Systems Ontology Overview](https://github.com/Systemarchitect6v/Resonance-Matrix/blob/main/README.md) | 📐 [6-Vector Model (Resonance-Matrix)](https://github.com/Systemarchitect6v/systems-ontology-proof-of-concept/blob/main/README.md)
 ---
 # 6-Vector Autonomous Navigation Architecture
 
