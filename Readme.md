@@ -1,3 +1,5 @@
+> **Framework Navigation:** 🌐 [Systems Ontology Overview](https://github.com/KevinBynum/systems-ontology-proof-of-concept) | 📐 [6-Vector Model (Resonance-Matrix)](https://github.com/KevinBynum/Resonance-Matrix)
+---
 # 6-Vector Autonomous Navigation Architecture
 
 ### Board Briefing & Technical Specification
